@@ -6,13 +6,13 @@ export const metadata = {
   description: "A sample Next.js app showing dynamic routing with modals as a route.",
 };
 
-export default function RootLayout(props: { children: React.ReactNode; modal: React.ReactNode }) {
+export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html>
       <body>
         <NextIntlClientProvider>
           {props.children}
-          {props.modal}
+          {/* {props.modal} */}
           <div id="modal-root" />
         </NextIntlClientProvider>
       </body>
