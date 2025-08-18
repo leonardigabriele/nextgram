@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -5,11 +7,12 @@ export function generateStaticParams() {
   return slugs.map((slug) => ({ id: slug }));
 }
 
-export default async function PhotoPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default async function PhotoPage({ params }: { params: Promise<{ id: string }> }) {
   const id = (await params).id;
-  return <div className="card">{id}</div>;
+  return (
+    <div>
+      <div className="card">{id}</div>
+      <Link href={"/"}>Home</Link>
+    </div>
+  );
 }
