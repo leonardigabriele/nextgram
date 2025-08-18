@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const dynamicParams = false;
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   let slugs = ["1", "2", "3", "4", "5", "6"];

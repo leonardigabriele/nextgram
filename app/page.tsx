@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default function Page() {
   let photos = Array.from({ length: 6 }, (_, i) => i + 1);
 
